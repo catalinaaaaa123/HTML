@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perro o Gato</title>
+    <style>
+        body {
+            background: #FFB6D9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        img {
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .botones {
+            display: flex;
+            gap: 20px;
+        }
+        
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            color: white;
+        }
+        
+        #btnPerro {
+            background-color: #8B6F47;
+        }
+        
+        #btnPerro:hover {
+            background-color: #A0845D;
+        }
+        
+        #btnGato {
+            background-color: #FF69B4;
+        }
+        
+        #btnGato:hover {
+            background-color: #FF1493;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>¿Perro o Gato?</h1>
+    
+    <img id="imagen" src="" alt="Perro">
+    
+    <div class="botones">
+        <button id="btnPerro">🐕 Perro</button>
+        <button id="btnGato">🐱 Gto</button>
+    </div>
+
+    <script>
+        const imagen = document.getElementById('imagen');
+        const btnPerro = document.getElementById('btnPerro');
+        const btnGato = document.getElementById('btnGato');
+        
+        const urlPerro = 'https://www.dzoom.org.es/wp-content/uploads/2021/02/fotos-perros-05-1024x682.jpg';
+        
+        const urlGato = 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=400&fit=crop';
+        
+        btnPerro.addEventListener('click', function() {
+            imagen.src = urlPerro;
+            imagen.alt = 'Perro';
+        });
+        
+        btnGato.addEventListener('click', function() {
+            imagen.src = urlGato;
+            imagen.alt = 'Gato';
+        });
+    </script>
+
+</body>
+
+</html>
